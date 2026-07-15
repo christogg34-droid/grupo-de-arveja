@@ -1,0 +1,505 @@
+/* ==========================================================================
+   RESET GENERAL Y TIPOGRAFÍA
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #fcfbfa;
+}
+
+h1, h2, h3, .logo-text {
+    font-family: 'Marcellus', serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Paleta de colores principal */
+:root {
+    --green-dark: #0f3022;   /* Verde botella premium */
+    --green-medium: #1b4332; /* Sombra corporativa */
+    --gold: #c5a059;         /* Oro satinado elegante */
+    --gold-light: #e5cb99;   /* Detalle oro suave */
+    --beige-bg: #f5f2eb;     /* Fondo beige cálido claro */
+}
+
+/* ==========================================================================
+   HEADER / NAVBAR
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(15, 48, 34, 0.98);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--gold);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    filter: brightness(1.2);
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 1.4rem;
+    color: var(--gold);
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+    height: 85vh;
+    min-height: 550px;
+    background: url('arvejas_background.jpeg') center/cover no-repeat; /* Fondo decorativo */
+    background-color: var(--green-dark); /* Fallback elegante */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 48, 34, 0.9) 40%, rgba(0, 0, 0, 0.5));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-badge {
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    display: inline-block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 5px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-meta {
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: var(--gold-light);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: var(--gold);
+    color: var(--green-dark);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gold);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--gold);
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+}
+
+/* ==========================================================================
+   LAYOUT GRID Y SECCIONES
+   ========================================================================== */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.section-tag {
+    display: block;
+    color: var(--green-medium);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.section-tag.gold {
+    color: var(--gold);
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: var(--green-dark);
+    margin-bottom: 20px;
+}
+
+.light-text {
+    color: #fff !important;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Cajas de Imágenes */
+.info-image-box {
+    position: relative;
+    padding: 10px;
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.floating-badge {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background-color: var(--green-dark);
+    color: var(--gold);
+    padding: 15px 25px;
+    font-family: 'Marcellus', serif;
+    border: 1px solid var(--gold);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ==========================================================================
+   SECCIÓN BENEFICIOS (ESTILO PREMIUM OSCURO)
+   ========================================================================== */
+.benefits-section {
+    background-color: var(--green-dark);
+    border-top: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+}
+
+.benefit-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 2px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.benefit-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    color: var(--gold);
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+}
+
+.benefit-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   FINANZAS Y METRICAS
+   ========================================================================== */
+.finance-section {
+    background-color: #faf9f6;
+}
+
+.section-desc {
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.metric-box {
+    background-color: #fff;
+    border-left: 4px solid var(--gold);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.metric-val {
+    display: block;
+    font-family: 'Marcellus', serif;
+    font-size: 2rem;
+    color: var(--green-dark);
+}
+
+.metric-lbl {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+/* Tablas estilizadas */
+.table-container {
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.styled-table th {
+    background-color: var(--green-medium);
+    color: #fff;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.styled-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+.total-row {
+    background-color: var(--beige-bg);
+    font-weight: 600;
+}
+
+.gold-text {
+    color: #b38636;
+}
+
+/* ==========================================================================
+   LOGÍSTICA
+   ========================================================================== */
+.logistic-section {
+    background-color: var(--beige-bg);
+}
+
+.logistic-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.highlight-card {
+    border: 2px solid var(--gold);
+    transform: scale(1.03);
+}
+
+.card-header {
+    font-family: 'Marcellus', serif;
+    font-size: 1.3rem;
+    color: var(--green-dark);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.card-list {
+    list-style: none;
+}
+
+.card-list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #444;
+    position: relative;
+    padding-left: 15px;
+}
+
+.card-list li::before {
+    content: "•";
+    color: var(--gold);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* ==========================================================================
+   LISTAS Y DETALLES
+   ========================================================================== */
+.styled-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.styled-list li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.styled-list li::before {
+    content: "✓";
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   FOOTER (PIE DE PÁGINA)
+   ========================================================================== */
+.main-footer {
+    background-color: #0a1f16;
+    color: #aaa;
+    border-top: 3px solid var(--gold);
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.footer-grid h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-grid h4 {
+    color: var(--gold);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.footer-grid p {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .grid-2, .grid-3, .metrics-grid, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links a {
+        margin: 0 10px;
+        font-size: 0.8rem;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .highlight-card {
+        transform: scale(1);
+    }
+}
