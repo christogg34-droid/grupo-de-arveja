@@ -66,7 +66,6 @@ h1, h2, h3, .logo-text {
 .logo-img {
     height: 45px;
     width: auto;
-    filter: brightness(1.2);
 }
 
 .logo-text {
@@ -94,9 +93,9 @@ h1, h2, h3, .logo-text {
    ========================================================================== */
 .hero-section {
     height: 85vh;
-    min-height: 550px;
-    background: url('arvejas_background.jpeg') center/cover no-repeat; /* Fondo decorativo */
-    background-color: var(--green-dark); /* Fallback elegante */
+    min-height: 500px;
+    background: url('arvejas_background.jpeg') center/cover no-repeat;
+    background-color: var(--green-dark);
     position: relative;
     display: flex;
     align-items: center;
@@ -111,7 +110,7 @@ h1, h2, h3, .logo-text {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(15, 48, 34, 0.9) 40%, rgba(0, 0, 0, 0.5));
+    background: linear-gradient(135deg, rgba(15, 48, 34, 0.92) 40%, rgba(0, 0, 0, 0.6));
 }
 
 .hero-content {
@@ -177,6 +176,86 @@ h1, h2, h3, .logo-text {
     background-color: transparent;
     color: var(--gold);
     box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+}
+
+/* ==========================================================================
+   NUEVA SECCIÓN DE ALUMNOS (VISTOSA & PREMIUM)
+   ========================================================================== */
+.team-section {
+    background-color: var(--green-dark);
+    border-bottom: 1px solid var(--gold);
+    padding: 20px 0;
+}
+
+.team-sub {
+    color: #b2cbb2 !important;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.members-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.member-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-radius: 4px;
+    padding: 30px 20px;
+    width: calc(33.333% - 20px);
+    min-width: 250px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.member-card:hover::before {
+    transform: scaleX(1);
+}
+
+.member-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.member-card h3 {
+    color: #fff;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.member-role {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    font-weight: 600;
 }
 
 /* ==========================================================================
@@ -441,6 +520,45 @@ p {
 }
 
 /* ==========================================================================
+   SECCIÓN DE FRASE MOTIVADORA
+   ========================================================================== */
+.quote-section {
+    background-color: var(--green-dark);
+    border-top: 1px solid var(--gold);
+    padding: 80px 0;
+    position: relative;
+}
+
+.quote-icon {
+    display: block;
+    font-family: 'Marcellus', serif;
+    font-size: 5rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: -10px;
+    opacity: 0.7;
+}
+
+.motivational-quote {
+    font-family: 'Marcellus', serif;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.quote-author {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ==========================================================================
    FOOTER (PIE DE PÁGINA)
    ========================================================================== */
 .main-footer {
@@ -499,7 +617,11 @@ p {
     .hero-title {
         font-size: 2rem;
     }
-    .highlight-card {
-        transform: scale(1);
+    .members-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .member-card {
+        width: 100%;
     }
 }
