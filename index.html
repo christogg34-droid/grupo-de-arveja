@@ -20,11 +20,11 @@
         </div>
         <nav class="nav-links">
             <a href="#inicio">Inicio</a>
-            <a href="#equipo">Integrantes</a>
             <a href="#proyecto">Proyecto</a>
-            <a href="#proyecciones">Ventas y Rentabilidad</a>
+            <a href="#coordinacion">Coordinación</a>
             <a href="#logistica">Logística</a>
             <a href="#certificaciones">Certificaciones</a>
+            <a href="#equipo">Integrantes</a>
         </nav>
     </header>
 
@@ -40,60 +40,12 @@
                 <span><strong>Ubicación:</strong> Comayagua, Honduras</span>
                 <span><strong>Fecha:</strong> 16 / 07 / 2026</span>
             </div>
+            <!-- Botón que redirecciona directamente a los estudiantes al final -->
             <a href="#equipo" class="btn-primary">Ver Integrantes</a>
         </div>
     </section>
 
-    <!-- Sección de Integrantes / Alumnos (Diseño Vistoso y Elegante) -->
-    <section id="equipo" class="team-section">
-        <div class="container">
-            <div class="text-center">
-                <span class="section-tag gold">Primer Año</span>
-                <h2 class="light-text">Alumnos Participantes</h2>
-                <p class="team-sub">Estudiantes de la carrera de Agroexportación comprometidos con el desarrollo agrícola sostenible.</p>
-            </div>
-            
-            <div class="members-grid">
-                <!-- Tarjeta 1 -->
-                <div class="member-card">
-                    
-                    <h3>José Anibal Fuentes Ochoa</h3>
-                    
-                </div>
-                <!-- Tarjeta 2 -->
-                <div class="member-card">
-                    <div class="member-icon"></div>
-                    <h3>Dulce Milagro Acosta Cruz</h3>
-                    
-                </div>
-                <!-- Tarjeta 3 -->
-                <div class="member-card">
-                    
-                    <h3>Cristy Lorena Ramos Soto</h3>
-                    
-                </div>
-                <!-- Tarjeta 4 -->
-                <div class="member-card">
-                    
-                    <h3>Lizzy Fernanda Castillo Henrriquez</h3>
-                    
-                </div>
-                <!-- Tarjeta 5 -->
-                <div class="member-card">
-                    
-                    <h3>Mary Maritxell Amador Henríquez</h3>
-                    
-                </div>
-                <div class="member-card">
-                    
-                    <h3>Luis Felipe Mejia Gonzales </h3>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Introducción y Características -->
+    <!-- PRIMERO: Sección de Introducción y Características -->
     <section id="proyecto" class="info-section">
         <div class="container grid-2">
             <div class="info-text">
@@ -112,6 +64,17 @@
                 <img src="arveja_bowl.jpeg" alt="Cultivo de Arveja Premium" class="featured-image">
                 <div class="floating-badge">98% Germinación</div>
             </div>
+        </div>
+    </section>
+
+    <!-- SEGUNDO: Sección del Coordinador (Centrado) -->
+    <section id="coordinacion" class="coordination-section" style="padding: 60px 0; background-color: #f9f9f9; text-align: center;">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            <span class="section-tag gold" style="display: inline-block; margin-bottom: 10px;">Dirección Académica</span>
+            <h2 style="font-family: 'Marcellus', serif; font-size: 2.5rem; color: #1b4332; margin-bottom: 15px;">Coordinador General</h2>
+            <div style="width: 60px; height: 3px; background-color: #d4af37; margin: 0 auto 25px auto;"></div>
+            <h3 style="font-size: 1.8rem; font-weight: 600; color: #2d3748; margin-bottom: 5px;">Dr. Walter Maradiaga</h3>
+            <p style="font-size: 1.1rem; color: #718096; font-style: italic;">Universidad Nacional de Agricultura</p>
         </div>
     </section>
 
@@ -142,14 +105,13 @@
         </div>
     </section>
 
-    <!-- Sección de Proyecciones Financieras (Tablas Estilizadas) -->
-    <section id="proyecciones" class="finance-section">
+    <!-- Sección de Proyecciones Financieras (OCULTADA por completo con display: none) -->
+    <section id="proyecciones" class="finance-section" style="display: none;">
         <div class="container">
             <span class="section-tag">Finanzas del Proyecto</span>
             <h2>Proyección de Ventas y Rendimiento</h2>
             <p class="section-desc">Cálculos basados en una densidad poblacional de <strong>222,222 plantas por hectárea</strong> con un distanciamiento de doble hilera.</p>
 
-            <!-- Grid de Métricas Rápidas -->
             <div class="metrics-grid">
                 <div class="metric-box">
                     <span class="metric-val">226,757</span>
@@ -165,7 +127,6 @@
                 </div>
             </div>
 
-            <!-- Tabla de Ingresos -->
             <div class="table-container">
                 <table class="styled-table">
                     <thead>
@@ -227,13 +188,10 @@
         </div>
     </section>
 
-    <!-- Sección de Certificaciones y Exportación -->
+    <!-- Sección de Certificaciones (Imagen eliminada con éxito) -->
     <section id="certificaciones" class="certifications-section">
-        <div class="container grid-2">
-            <div class="info-image-box">
-                <img src="arvejas_empaque.jpeg" alt="Empaque de exportación" class="featured-image">
-            </div>
-            <div class="info-text">
+        <div class="container" style="max-width: 900px; margin: 0 auto;">
+            <div class="info-text" style="width: 100%;">
                 <span class="section-tag">Regulación Internacional</span>
                 <h2>Inocuidad Alimentaria Estricta</h2>
                 <p>El mercado estadounidense absorbe arveja en múltiples formatos debido al auge de alternativas vegetales. Para acceder de forma segura, el <strong>SENASA</strong> como núcleo regulador en Honduras exige:</p>
@@ -243,6 +201,45 @@
                     <li>Certificado fitosanitario con timbres de ley (CINAH).</li>
                     <li>Cumplimiento estricto con la ley de modernización <strong>FDA-USDA</strong> y certificaciones de inocuidad como <strong>GLOBAL G.A.P.</strong></li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÚLTIMO: Sección de Integrantes / Alumnos (Movida al final) -->
+    <section id="equipo" class="team-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag gold">Primer Año</span>
+                <h2 class="light-text">Alumnos Participantes</h2>
+                <p class="team-sub">Estudiantes de la carrera de Agroexportación comprometidos con el desarrollo agrícola sostenible.</p>
+            </div>
+            
+            <div class="members-grid">
+                <!-- Tarjeta 1 -->
+                <div class="member-card">
+                    <h3>José Anibal Fuentes Ochoa</h3>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="member-card">
+                    <div class="member-icon"></div>
+                    <h3>Dulce Milagro Acosta Cruz</h3>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="member-card">
+                    <h3>Cristy Lorena Ramos Soto</h3>
+                </div>
+                <!-- Tarjeta 4 -->
+                <div class="member-card">
+                    <h3>Lizzy Fernanda Castillo Henrriquez</h3>
+                </div>
+                <!-- Tarjeta 5 -->
+                <div class="member-card">
+                    <h3>Mary Maritxell Amador Henríquez</h3>
+                </div>
+                <!-- Tarjeta 6 -->
+                <div class="member-card">
+                    <h3>Luis Felipe Mejia Gonzales</h3>
+                </div>
             </div>
         </div>
     </section>
@@ -280,6 +277,7 @@
     </footer>
 
 </body>
+</html>
 </html>
 </body>
 </html>
