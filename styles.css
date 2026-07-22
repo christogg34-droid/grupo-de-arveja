@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RESET GENERAL Y TIPOGRAFÍA (TEMA BLANCO / CLARO)
+   RESET GENERAL Y TIPOGRAFÍA
    ========================================================================== */
 * {
     margin: 0;
@@ -31,18 +31,16 @@ h1, h2, h3, .logo-text {
     text-align: center;
 }
 
-/* Paleta de colores ajustada para Fondo Blanco */
 :root {
-    --green-dark: #1b3b1a;   /* Verde profundo corporativo */
-    --green-medium: #2e7d32; /* Verde forestal vivo */
-    --green-light: #f4f7f4;  /* Fondo verde muy suave */
-    --gold: #b38636;         /* Oro refinado */
-    --gold-light: #d4af37;   /* Oro satinado */
-    --border-color: #e0e0e0; /* Gris claro para bordes */
+    --green-dark: #1b3b1a;   
+    --green-medium: #2e7d32; 
+    --green-light: #f4f7f4;  
+    --gold: #b38636;         
+    --border-color: #e0e0e0; 
 }
 
 /* ==========================================================================
-   HEADER / NAVBAR (ESTILO BLANCO LIMPIO)
+   NAVBAR
    ========================================================================== */
 .navbar {
     display: flex;
@@ -91,7 +89,7 @@ h1, h2, h3, .logo-text {
 }
 
 /* ==========================================================================
-   HERO SECTION (PORTADA CLARA)
+   HERO SECTION
    ========================================================================== */
 .hero-section {
     height: 85vh;
@@ -143,15 +141,12 @@ h1, h2, h3, .logo-text {
 }
 
 .hero-subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 20px;
     color: #4a5568;
 }
 
-/* Indicador de exportación con Bandera EE. UU. */
 .export-target {
     margin: 20px 0;
     font-size: 1.05rem;
@@ -197,13 +192,49 @@ h1, h2, h3, .logo-text {
 
 .btn-primary:hover {
     background-color: var(--green-dark);
-    border-color: var(--green-dark);
-    color: #ffffff;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* ==========================================================================
-   SECCIÓN ACERCA DE NOSOTROS (INICIO / PORTADA)
+   FRASE MOTIVADORA
+   ========================================================================== */
+.quote-section {
+    background-color: #f4f7f4;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 50px 0;
+}
+
+.quote-icon {
+    display: block;
+    font-family: 'Marcellus', serif;
+    font-size: 4rem;
+    color: var(--green-medium);
+    line-height: 1;
+    margin-bottom: -10px;
+    opacity: 0.5;
+}
+
+.motivational-quote {
+    font-family: 'Marcellus', serif;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--green-dark);
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-style: italic;
+}
+
+.quote-author {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--green-medium);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   NOSOTROS Y EQUIPO GERENCIAL
    ========================================================================== */
 .team-section {
     background-color: #f9fbf8;
@@ -242,7 +273,6 @@ h1, h2, h3, .logo-text {
     color: #666;
     font-size: 0.95rem;
     font-style: italic;
-    margin-bottom: 0;
 }
 
 .team-exec-title {
@@ -251,17 +281,10 @@ h1, h2, h3, .logo-text {
     padding-top: 30px;
 }
 
-.team-exec-title h3 {
-    color: var(--green-dark);
-    font-size: 1.8rem;
-    margin-top: 5px;
-}
-
 .members-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    margin-top: 20px;
 }
 
 .member-card {
@@ -270,20 +293,18 @@ h1, h2, h3, .logo-text {
     border-radius: 6px;
     padding: 22px 15px;
     text-align: center;
-    transition: all 0.3s ease;
     box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
 }
 
 .member-card:hover {
     transform: translateY(-4px);
     border-color: var(--green-medium);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
 .member-card h3 {
     color: var(--green-dark);
     font-size: 1.1rem;
-    font-weight: 600;
 }
 
 .member-role {
@@ -313,216 +334,195 @@ h1, h2, h3, .logo-text {
 
 .team-photo-box img {
     width: 100%;
-    height: auto;
     border-radius: 6px;
-    display: block;
 }
 
 /* ==========================================================================
-   VENTANAS DESPLEGABLES (DETAILS & SUMMARY)
+   BOTONES DE SECCIONES PARA VENTANAS
    ========================================================================== */
-.windows-section {
+.project-buttons-section {
     padding: 60px 0;
     background-color: #ffffff;
 }
 
-.window-container {
+.windows-buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.window-card {
-    background: #ffffff;
+.window-btn {
+    background: #f8faf8;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-    overflow: hidden;
+    border-left: 4px solid var(--green-medium);
+    padding: 22px 20px;
+    font-size: 1.05rem;
+    font-family: 'Marcellus', serif;
+    color: var(--green-dark);
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
     transition: all 0.3s ease;
 }
 
-.window-card[open] {
-    border-color: var(--green-medium);
-    box-shadow: 0 6px 18px rgba(46, 125, 50, 0.12);
-}
-
-.window-header {
-    padding: 20px 25px;
-    font-family: 'Marcellus', serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--green-dark);
-    background-color: #f8faf8;
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--border-color);
-    user-select: none;
-}
-
-.window-header::-webkit-details-marker {
-    display: none;
-}
-
-.window-header::after {
-    content: '▼';
-    font-size: 0.8rem;
-    color: var(--green-medium);
-    transition: transform 0.3s ease;
-}
-
-.window-card[open] .window-header::after {
-    transform: rotate(180deg);
-}
-
-.window-content {
-    padding: 30px;
+.window-btn:hover {
     background: #ffffff;
+    border-color: var(--green-medium);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.12);
+}
+
+.btn-icon {
+    font-size: 1.4rem;
 }
 
 /* ==========================================================================
-   LAYOUT GRID Y ELEMENTOS INTERNOS
+   VENTANAS EMERGENTES (MODALES POP-UP)
    ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-window {
+    background: #ffffff;
+    width: 90%;
+    max-width: 900px;
+    max-height: 85vh;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.85);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-window {
+    transform: scale(1);
+}
+
+.modal-header {
+    background: var(--green-dark);
+    color: #ffffff;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: var(--gold);
+}
+
+.modal-body {
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* Estilos de Contenido Interno */
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
 }
 
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-}
-
-.section-tag {
-    display: block;
-    color: var(--green-medium);
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.section-tag.gold {
-    color: var(--gold);
-}
-
-h2 {
-    font-size: 2rem;
-    color: var(--green-dark);
-    margin-bottom: 18px;
-}
-
-p {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 18px;
-    color: #4a5568;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
 .project-goals {
     background: #f4f7f4;
-    padding: 18px;
+    padding: 15px;
     border-left: 4px solid var(--green-medium);
     border-radius: 4px;
-    font-size: 0.95rem;
-}
-
-.info-image-box {
-    text-align: center;
+    margin-top: 15px;
 }
 
 .featured-image {
     width: 100%;
-    max-width: 100%;
-    height: auto;
     border-radius: 6px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-/* Cajas de Beneficios */
 .benefit-card {
     background-color: #f9fbf8;
     border: 1px solid var(--border-color);
-    padding: 30px 20px;
+    padding: 25px 15px;
     text-align: center;
     border-radius: 6px;
-    transition: transform 0.3s ease;
 }
 
-.benefit-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--green-medium);
-}
-
-.benefit-card .icon {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-}
-
-.benefit-card h3 {
-    color: var(--green-dark);
-    margin-bottom: 12px;
-    font-size: 1.2rem;
-}
-
-.benefit-card p {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 0;
-}
-
-/* Logística */
 .logistic-card {
     background-color: #f9fbf8;
-    padding: 25px;
+    padding: 20px;
     border-radius: 6px;
     border: 1px solid var(--border-color);
 }
 
 .highlight-card {
     background-color: #eef5ee;
-    border: 1px solid var(--green-medium);
+    border-color: var(--green-medium);
 }
 
 .card-header {
     font-family: 'Marcellus', serif;
-    font-size: 1.2rem;
-    color: var(--green-dark);
     font-weight: bold;
-    margin-bottom: 15px;
+    color: var(--green-dark);
+    margin-bottom: 12px;
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 8px;
+    padding-bottom: 6px;
 }
 
-.card-list {
+.card-list, .styled-list {
     list-style: none;
-}
-
-.card-list li {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
-    color: #444;
-}
-
-/* Listas con viñetas elegantes */
-.styled-list {
-    list-style: none;
-    margin-top: 15px;
+    line-height: 1.7;
 }
 
 .styled-list li {
-    margin-bottom: 12px;
-    padding-left: 25px;
+    padding-left: 20px;
     position: relative;
-    line-height: 1.6;
-    color: #4a5568;
+    margin-bottom: 10px;
 }
 
 .styled-list li::before {
@@ -534,51 +534,11 @@ p {
 }
 
 /* ==========================================================================
-   SECCIÓN DE FRASE MOTIVADORA
-   ========================================================================== */
-.quote-section {
-    background-color: #f4f7f4;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    padding: 60px 0;
-}
-
-.quote-icon {
-    display: block;
-    font-family: 'Marcellus', serif;
-    font-size: 4rem;
-    color: var(--green-medium);
-    line-height: 1;
-    margin-bottom: -10px;
-    opacity: 0.5;
-}
-
-.motivational-quote {
-    font-family: 'Marcellus', serif;
-    font-size: 1.4rem;
-    line-height: 1.6;
-    color: var(--green-dark);
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-    font-style: italic;
-}
-
-.quote-author {
-    display: block;
-    font-size: 0.85rem;
-    color: var(--green-medium);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-}
-
-/* ==========================================================================
-   FOOTER (PIE DE PÁGINA)
+   FOOTER
    ========================================================================== */
 .main-footer {
     background-color: var(--green-dark);
     color: #ffffff;
-    font-size: 0.9rem;
     padding-top: 40px;
 }
 
@@ -589,17 +549,9 @@ p {
     padding-bottom: 30px;
 }
 
-.footer-grid h3 {
+.footer-grid h3, .footer-grid h4 {
     color: #ffffff;
-    margin-bottom: 15px;
-}
-
-.footer-grid h4 {
-    color: var(--gold-light);
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+    margin-bottom: 12px;
 }
 
 .footer-grid p {
@@ -615,20 +567,11 @@ p {
     color: #a0baa0;
 }
 
-/* Responsive para dispositivos móviles */
 @media (max-width: 768px) {
     .grid-2 {
         grid-template-columns: 1fr;
     }
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .nav-links a {
-        margin: 0 8px;
-        font-size: 0.75rem;
-    }
     .hero-title {
-        font-size: 2.1rem;
+        font-size: 2rem;
     }
 }
