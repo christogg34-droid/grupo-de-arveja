@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RESET GENERAL Y TIPOGRAFÍA
+   RESET GENERAL Y TIPOGRAFÍA (TEMA BLANCO / CLARO)
    ========================================================================== */
 * {
     margin: 0;
@@ -10,8 +10,8 @@
 html {
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
-    color: #333;
-    background-color: #fcfbfa;
+    color: #2c3e50;
+    background-color: #ffffff;
 }
 
 h1, h2, h3, .logo-text {
@@ -31,30 +31,31 @@ h1, h2, h3, .logo-text {
     text-align: center;
 }
 
-/* Paleta de colores principal */
+/* Paleta de colores ajustada para Fondo Blanco */
 :root {
-    --green-dark: #0f3022;   /* Verde botella premium */
-    --green-medium: #1b4332; /* Sombra corporativa */
-    --gold: #c5a059;         /* Oro satinado elegante */
-    --gold-light: #e5cb99;   /* Detalle oro suave */
-    --beige-bg: #f5f2eb;     /* Fondo beige cálido claro */
+    --green-dark: #1b3b1a;   /* Verde profundo corporativo */
+    --green-medium: #2e7d32; /* Verde forestal vivo */
+    --green-light: #f4f7f4;  /* Fondo verde muy suave */
+    --gold: #b38636;         /* Oro refinado */
+    --gold-light: #d4af37;   /* Oro satinado */
+    --border-color: #e0e0e0; /* Gris claro para bordes */
 }
 
 /* ==========================================================================
-   HEADER / NAVBAR
+   HEADER / NAVBAR (ESTILO BLANCO LIMPIO)
    ========================================================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    background-color: rgba(15, 48, 34, 0.98);
+    padding: 15px 5%;
+    background-color: #ffffff;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--gold);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo-container {
@@ -69,33 +70,34 @@ h1, h2, h3, .logo-text {
 }
 
 .logo-text {
-    color: #fff;
     font-size: 1.4rem;
-    color: var(--gold);
+    color: var(--green-dark);
+    font-weight: bold;
 }
 
 .nav-links a {
-    color: #fff;
+    color: #2c3e50;
     text-decoration: none;
     margin-left: 25px;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--gold);
+    color: var(--green-medium);
 }
 
 /* ==========================================================================
-   HERO SECTION
+   HERO SECTION (PORTADA CLARA)
    ========================================================================== */
 .hero-section {
     height: 85vh;
     min-height: 500px;
     background: url('arvejas_background.jpeg') center/cover no-repeat;
-    background-color: var(--green-dark);
+    background-color: var(--green-light);
     position: relative;
     display: flex;
     align-items: center;
@@ -110,168 +112,290 @@ h1, h2, h3, .logo-text {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(15, 48, 34, 0.92) 40%, rgba(0, 0, 0, 0.6));
+    background: rgba(255, 255, 255, 0.88);
 }
 
 .hero-content {
     position: relative;
     z-index: 10;
     max-width: 800px;
-    color: #fff;
+    color: var(--green-dark);
     padding: 0 20px;
 }
 
 .hero-badge {
-    color: var(--gold);
+    color: var(--green-medium);
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 3px;
     display: inline-block;
     margin-bottom: 20px;
-    border-bottom: 1px solid var(--gold);
+    border-bottom: 2px solid var(--green-medium);
     padding-bottom: 5px;
+    font-weight: 600;
 }
 
 .hero-title {
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    color: var(--green-dark);
 }
 
 .hero-subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 30px;
-    opacity: 0.9;
+    margin-bottom: 20px;
+    color: #4a5568;
+}
+
+/* Indicador de exportación con Bandera EE. UU. */
+.export-target {
+    margin: 20px 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--green-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.us-flag {
+    width: 38px;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .hero-meta {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 0.9rem;
     display: flex;
     justify-content: center;
     gap: 30px;
-    color: var(--gold-light);
+    color: #666;
 }
 
 .btn-primary {
     display: inline-block;
     padding: 14px 35px;
-    background-color: var(--gold);
-    color: var(--green-dark);
+    background-color: var(--green-medium);
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 1px;
-    border-radius: 2px;
+    border-radius: 4px;
     transition: all 0.3s ease;
-    border: 1px solid var(--gold);
+    border: 1px solid var(--green-medium);
+    box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
 }
 
 .btn-primary:hover {
-    background-color: transparent;
-    color: var(--gold);
-    box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+    background-color: var(--green-dark);
+    border-color: var(--green-dark);
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* ==========================================================================
-   NUEVA SECCIÓN DE ALUMNOS (VISTOSA & PREMIUM)
+   SECCIÓN ACERCA DE NOSOTROS (INICIO / PORTADA)
    ========================================================================== */
 .team-section {
-    background-color: var(--green-dark);
-    border-bottom: 1px solid var(--gold);
-    padding: 20px 0;
+    background-color: #f9fbf8;
+    border-bottom: 1px solid var(--border-color);
+    padding: 60px 0;
+}
+
+.team-header {
+    margin-bottom: 40px;
 }
 
 .team-sub {
-    color: #b2cbb2 !important;
+    color: #555;
     max-width: 600px;
+    margin: 0 auto;
+}
+
+.coordinator-card {
+    max-width: 450px;
     margin: 0 auto 40px auto;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid var(--green-medium);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.coordinator-card h3 {
+    color: var(--green-dark);
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.coordinator-card p {
+    color: #666;
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.team-exec-title {
+    margin-bottom: 30px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 30px;
+}
+
+.team-exec-title h3 {
+    color: var(--green-dark);
+    font-size: 1.8rem;
+    margin-top: 5px;
 }
 
 .members-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
     margin-top: 20px;
 }
 
 .member-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(197, 160, 89, 0.2);
-    border-radius: 4px;
-    padding: 30px 20px;
-    width: calc(33.333% - 20px);
-    min-width: 250px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 22px 15px;
     text-align: center;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.member-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--gold);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
 }
 
 .member-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--gold);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.member-card:hover::before {
-    transform: scaleX(1);
-}
-
-.member-icon {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    transform: translateY(-4px);
+    border-color: var(--green-medium);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
 .member-card h3 {
-    color: #fff;
-    font-size: 1.15rem;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
+    color: var(--green-dark);
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .member-role {
     display: block;
     font-size: 0.8rem;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--green-medium);
     letter-spacing: 1.5px;
     font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.team-photo-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.team-photo-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid var(--green-medium);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.team-photo-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
 }
 
 /* ==========================================================================
-   LAYOUT GRID Y SECCIONES
+   VENTANAS DESPLEGABLES (DETAILS & SUMMARY)
+   ========================================================================== */
+.windows-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.window-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.window-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.window-card[open] {
+    border-color: var(--green-medium);
+    box-shadow: 0 6px 18px rgba(46, 125, 50, 0.12);
+}
+
+.window-header {
+    padding: 20px 25px;
+    font-family: 'Marcellus', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--green-dark);
+    background-color: #f8faf8;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    user-select: none;
+}
+
+.window-header::-webkit-details-marker {
+    display: none;
+}
+
+.window-header::after {
+    content: '▼';
+    font-size: 0.8rem;
+    color: var(--green-medium);
+    transition: transform 0.3s ease;
+}
+
+.window-card[open] .window-header::after {
+    transform: rotate(180deg);
+}
+
+.window-content {
+    padding: 30px;
+    background: #ffffff;
+}
+
+/* ==========================================================================
+   LAYOUT GRID Y ELEMENTOS INTERNOS
    ========================================================================== */
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 40px;
     align-items: center;
 }
 
 .grid-3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
 }
 
 .section-tag {
@@ -289,190 +413,91 @@ h1, h2, h3, .logo-text {
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: var(--green-dark);
-    margin-bottom: 20px;
-}
-
-.light-text {
-    color: #fff !important;
+    margin-bottom: 18px;
 }
 
 p {
     font-size: 1rem;
     line-height: 1.7;
-    margin-bottom: 20px;
-    color: #555;
+    margin-bottom: 18px;
+    color: #4a5568;
 }
 
-/* Cajas de Imágenes */
+.project-goals {
+    background: #f4f7f4;
+    padding: 18px;
+    border-left: 4px solid var(--green-medium);
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
 .info-image-box {
-    position: relative;
-    padding: 10px;
+    text-align: center;
 }
 
 .featured-image {
     width: 100%;
+    max-width: 100%;
     height: auto;
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-.floating-badge {
-    position: absolute;
-    bottom: -20px;
-    right: 20px;
-    background-color: var(--green-dark);
-    color: var(--gold);
-    padding: 15px 25px;
-    font-family: 'Marcellus', serif;
-    border: 1px solid var(--gold);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* ==========================================================================
-   SECCIÓN BENEFICIOS (ESTILO PREMIUM OSCURO)
-   ========================================================================== */
-.benefits-section {
-    background-color: var(--green-dark);
-    border-top: 2px solid var(--gold);
-    border-bottom: 2px solid var(--gold);
-}
-
+/* Cajas de Beneficios */
 .benefit-card {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(197, 160, 89, 0.2);
-    padding: 40px 30px;
+    background-color: #f9fbf8;
+    border: 1px solid var(--border-color);
+    padding: 30px 20px;
     text-align: center;
-    border-radius: 2px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
 }
 
 .benefit-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--gold);
+    transform: translateY(-4px);
+    border-color: var(--green-medium);
 }
 
 .benefit-card .icon {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
 }
 
 .benefit-card h3 {
-    color: var(--gold);
-    margin-bottom: 15px;
-    font-size: 1.25rem;
+    color: var(--green-dark);
+    margin-bottom: 12px;
+    font-size: 1.2rem;
 }
 
 .benefit-card p {
-    color: #ccc;
-    font-size: 0.95rem;
+    color: #666;
+    font-size: 0.9rem;
     margin-bottom: 0;
 }
 
-/* ==========================================================================
-   FINANZAS Y METRICAS
-   ========================================================================== */
-.finance-section {
-    background-color: #faf9f6;
-}
-
-.section-desc {
-    max-width: 600px;
-    margin-bottom: 40px;
-}
-
-.metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.metric-box {
-    background-color: #fff;
-    border-left: 4px solid var(--gold);
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-}
-
-.metric-val {
-    display: block;
-    font-family: 'Marcellus', serif;
-    font-size: 2rem;
-    color: var(--green-dark);
-}
-
-.metric-lbl {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    color: #777;
-    letter-spacing: 1px;
-}
-
-/* Tablas estilizadas */
-.table-container {
-    overflow-x: auto;
-}
-
-.styled-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-}
-
-.styled-table th {
-    background-color: var(--green-medium);
-    color: #fff;
-    text-align: left;
-    padding: 15px 20px;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-}
-
-.styled-table td {
-    padding: 15px 20px;
-    border-bottom: 1px solid #eee;
-    font-size: 0.95rem;
-}
-
-.total-row {
-    background-color: var(--beige-bg);
-    font-weight: 600;
-}
-
-.gold-text {
-    color: #b38636;
-}
-
-/* ==========================================================================
-   LOGÍSTICA
-   ========================================================================== */
-.logistic-section {
-    background-color: var(--beige-bg);
-}
-
+/* Logística */
 .logistic-card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 4px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    background-color: #f9fbf8;
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
 }
 
 .highlight-card {
-    border: 2px solid var(--gold);
-    transform: scale(1.03);
+    background-color: #eef5ee;
+    border: 1px solid var(--green-medium);
 }
 
 .card-header {
     font-family: 'Marcellus', serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--green-dark);
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
 }
 
 .card-list {
@@ -482,38 +507,27 @@ p {
 .card-list li {
     font-size: 0.95rem;
     line-height: 1.6;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     color: #444;
-    position: relative;
-    padding-left: 15px;
 }
 
-.card-list li::before {
-    content: "•";
-    color: var(--gold);
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-/* ==========================================================================
-   LISTAS Y DETALLES
-   ========================================================================== */
+/* Listas con viñetas elegantes */
 .styled-list {
     list-style: none;
     margin-top: 15px;
 }
 
 .styled-list li {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     padding-left: 25px;
     position: relative;
     line-height: 1.6;
+    color: #4a5568;
 }
 
 .styled-list li::before {
     content: "✓";
-    color: var(--gold);
+    color: var(--green-medium);
     position: absolute;
     left: 0;
     font-weight: bold;
@@ -523,65 +537,65 @@ p {
    SECCIÓN DE FRASE MOTIVADORA
    ========================================================================== */
 .quote-section {
-    background-color: var(--green-dark);
-    border-top: 1px solid var(--gold);
-    padding: 80px 0;
-    position: relative;
+    background-color: #f4f7f4;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 60px 0;
 }
 
 .quote-icon {
     display: block;
     font-family: 'Marcellus', serif;
-    font-size: 5rem;
-    color: var(--gold);
+    font-size: 4rem;
+    color: var(--green-medium);
     line-height: 1;
     margin-bottom: -10px;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .motivational-quote {
     font-family: 'Marcellus', serif;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     line-height: 1.6;
-    color: #fff;
+    color: var(--green-dark);
     max-width: 800px;
-    margin: 0 auto 25px auto;
+    margin: 0 auto 20px auto;
     font-style: italic;
-    font-weight: 300;
 }
 
 .quote-author {
     display: block;
-    font-size: 0.9rem;
-    color: var(--gold);
+    font-size: 0.85rem;
+    color: var(--green-medium);
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 600;
 }
 
 /* ==========================================================================
    FOOTER (PIE DE PÁGINA)
    ========================================================================== */
 .main-footer {
-    background-color: #0a1f16;
-    color: #aaa;
-    border-top: 3px solid var(--gold);
+    background-color: var(--green-dark);
+    color: #ffffff;
     font-size: 0.9rem;
+    padding-top: 40px;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    padding: 40px 0;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding-bottom: 30px;
 }
 
 .footer-grid h3 {
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 
 .footer-grid h4 {
-    color: var(--gold);
+    color: var(--gold-light);
     margin-bottom: 15px;
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -589,21 +603,21 @@ p {
 }
 
 .footer-grid p {
-    color: #999;
+    color: #d0d7d0;
     font-size: 0.85rem;
 }
 
 .footer-bottom {
     text-align: center;
     padding: 20px 0;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255,255,255,0.1);
     font-size: 0.8rem;
-    color: #666;
+    color: #a0baa0;
 }
 
 /* Responsive para dispositivos móviles */
 @media (max-width: 768px) {
-    .grid-2, .grid-3, .metrics-grid, .footer-grid {
+    .grid-2 {
         grid-template-columns: 1fr;
     }
     .navbar {
@@ -611,17 +625,10 @@ p {
         gap: 10px;
     }
     .nav-links a {
-        margin: 0 10px;
-        font-size: 0.8rem;
+        margin: 0 8px;
+        font-size: 0.75rem;
     }
     .hero-title {
-        font-size: 2rem;
-    }
-    .members-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    .member-card {
-        width: 100%;
+        font-size: 2.1rem;
     }
 }
